@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1688844663 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\formas\3d.cpp
+1688864315 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\formas\3d.cpp
 	"3d.h"
 
-1688844667 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\formas\3d.h
+1688864313 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\formas\3d.h
 	"../utils/gl_canvas2d.h"
 	"../utils/Matriz.h"
 	<math.h>
 	<time.h>
 
-1687540860 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\gl_canvas2d.h
+1688864168 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\gl_canvas2d.h
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -41,23 +41,36 @@
 	"../utils/Vector3.h"
 	"../utils/gl_canvas2d.h"
 
-1688858456 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\main.cpp
+1688863476 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
 	<stdio.h>
 	<stdlib.h>
-	"utils/gl_canvas2d.h"
-	"motor/Motor.h"
+	"Manager.h"
 
-1688859749 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.h
+1688864271 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.h
 	"../formas/3d.h"
 	<vector>
 
-1688859864 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.cpp
+1688867281 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.cpp
 	"Motor.h"
 
-1687963740 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\gl_canvas2d.cpp
+1688864164 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
+
+1688862554 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.h
+	"utils/gl_canvas2d.h"
+	"motor/Motor.h"
+	"utils/Frames.h"
+
+1688862534 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\frames.h
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	"gl_canvas2d.h"
+
+1688867235 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.cpp
+	"Manager.h"
 

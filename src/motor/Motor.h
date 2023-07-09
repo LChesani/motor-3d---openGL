@@ -24,9 +24,6 @@ protected:
     float local = -800.0f;
     int x, y;
     int w, h;
-    float ang;
-    float rot;
-    int RPM;
     bool ligado;
     std::vector <Forma> _3d;
     void build3d();
@@ -34,6 +31,10 @@ protected:
     Manivela manivela;
     Pistao pistao;
 public:
+    int dim = 20;
+    float ang;
+    int RPM;
+    float rot;
     Motor(int rpm, int _w, int _h);
     void chave();
     void _2dRender();

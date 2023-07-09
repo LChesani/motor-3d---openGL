@@ -1,16 +1,26 @@
 #include "3d.h"
 
 Forma::Forma(int DIM){
+    this->dim = DIM;
     m.init(DIM);
 }
 
+void Forma::setDim(int DIM){
+    this->dim = DIM;
+    m.init(DIM);
+}
 
 void Forma::render() {
+    float theta = 0.0f;
     for(int x=0; x < this->m.DIM; x++){
+        float phi = 0.0f;
         for(int z=0; z < this->m.DIM; z++){
+            CV::color((cos(theta)*sin(phi)+1.0f)/2.0f, (sin(theta)*sin(phi)+1.0f)/2.0f, (cos(phi)+1.0f)/2.0f);
             CV::line(this->m.proj[x][z].x, this->m.proj[x][z].y, this->m.proj[x+1][z].x, this->m.proj[x+1][z].y);
             CV::line(this->m.proj[x][z].x, this->m.proj[x][z].y, this->m.proj[x][z+1].x, this->m.proj[x][z+1].y);
+            phi += PI/this->m.DIM;
         }
+        theta += 2*PI/this->m.DIM;
     }
 }
 

@@ -4,34 +4,23 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "Manager.h"
 
-#include "utils/gl_canvas2d.h"
-#include "motor/Motor.h"
 
-int opcao  = 1;
-int screenWidth = 500, screenHeight = 500;
+
+int screenWidth = 1000, screenHeight = 800;
 int mouseX, mouseY;
 
-Motor *motor = nullptr;
+Manager *manager = nullptr;
 
 void render(){
    CV::translate(screenWidth/2, screenHeight/2);
-   if(opcao == 1){
-      motor->_2dRender();
-   }
-   else if(opcao == 2){
-      motor->_3dRender();
-   }
+   manager->render();
 }
 
 
 void keyboard(int key){
-   if(key == '1'){
-      opcao = 1;
-   }
-   else if(key == '2'){
-      opcao = 2;
-   }
+   manager->onKey(key);
 }
 
 
@@ -46,7 +35,9 @@ void mouse(int button, int state, int wheel, int direction, int x, int y){
 }
 
 int main(void){
-   motor = new Motor(1000, screenWidth, screenHeight);
+   
+   manager = new Manager(screenWidth, screenHeight);
    CV::init(&screenWidth, &screenHeight, "Motor");
+   CV::clear(0, 0, 0);
    CV::run();;
 }

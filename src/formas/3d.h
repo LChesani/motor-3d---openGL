@@ -15,12 +15,14 @@ class Forma{
 public:
     float local = -900.0f;
     Coord m;
+    int dim;
     Forma(int DIM);
     void render();
     void esfera(int r);
     void disco(int r);
     void cilindro(int r, float h);
     void placa(int r, float h);
+    void setDim(int DIM);
 };
 
 
