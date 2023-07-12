@@ -49,21 +49,23 @@
 	<stdlib.h>
 	"Manager.h"
 
-1688864271 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.h
+1689184423 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.h
 	"../formas/3d.h"
 	<vector>
 
-1688867281 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.cpp
+1689184567 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\motor\motor.cpp
 	"Motor.h"
 
 1688864164 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1688862554 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.h
+1689184693 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.h
 	"utils/gl_canvas2d.h"
 	"motor/Motor.h"
 	"utils/Frames.h"
+	<Windows.h>
+	<mmsystem.h>
 
 1688862534 d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\utils\frames.h
 	<stdio.h>
@@ -71,6 +73,6 @@
 	<windows.h>
 	"gl_canvas2d.h"
 
-1688867235 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.cpp
+1689184739 source:d:\5 semestre\pozzer\canvas2d\trab4luischesani\src\manager.cpp
 	"Manager.h"
 

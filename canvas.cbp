@@ -17,6 +17,9 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-lwinmm" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="../__bin/Release/canvas" prefix_auto="1" extension_auto="1" />
@@ -31,6 +34,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lwinmm" />
 				</Linker>
 			</Target>
 		</Build>
@@ -44,11 +48,14 @@
 			<Add library="../lib/freeglut.lib" />
 		</Linker>
 		<Unit filename="include/GL/glut.h" />
+		<Unit filename="src/Manager.cpp" />
+		<Unit filename="src/Manager.h" />
 		<Unit filename="src/formas/3d.cpp" />
 		<Unit filename="src/formas/3d.h" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/motor/Motor.cpp" />
 		<Unit filename="src/motor/Motor.h" />
+		<Unit filename="src/utils/Frames.h" />
 		<Unit filename="src/utils/Matriz.h" />
 		<Unit filename="src/utils/Vector3.h" />
 		<Unit filename="src/utils/gl_canvas2d.cpp" />

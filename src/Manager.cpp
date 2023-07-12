@@ -1,23 +1,17 @@
 #include "Manager.h"
 
-
-
 Manager::Manager(int _w, int _h){
     w = _w;
     h = _h;
     motor = new Motor(100, w, h);
     frames = new Frames();
-    opcao = 0;
+
+    PlaySound("Trab4LuisChesani/src/soundtrack.wav", NULL, SND_ASYNC | SND_LOOP);
 }
 
 void Manager::onKey(int key){
-    if(key == '1'){
-        opcao = 0;
-        return;
-    }
-    if(key == '2'){
-        opcao = 1;
-        return;
+    if(key == '/'){
+        _3d = !_3d;
     }
     if(key == '='){
         motor->dim += 1;
@@ -35,6 +29,12 @@ void Manager::onKey(int key){
         motor->RPM -= 50;
         return;
     }
+    if(key == ' '){
+        motor->ort = !motor->ort;
+    }
+    if(key >= '0' && key <= '9'){
+        motor->exibir[key-'0'] = !motor->exibir[key-'0'];
+    }
 
 }
 
@@ -49,14 +49,18 @@ void Manager::render(){
     sprintf(aux, "RPM: %d", motor->RPM);
     CV::text(-w/2.0f+10, 25-h/2.0f, aux);
 
+    sprintf(aux, "DIM: %d", motor->dim);
+    CV::text(-w/2.0f+10, 40-h/2.0f, aux);
+
     fps = fps * 60.0f; // frames por minuto
-    float step = 2*PI/fps;
+    float step = 2*PI/fps; //divide uma volta em um minuto
     motor->ang += step*motor->RPM;
     motor->rot += step*5.0f;
-    if(opcao == 0){
+    if(!_3d){
         motor->_2dRender();
     }
-    if(opcao == 1){
+    else{
         motor->_3dRender();
     }
 }
+

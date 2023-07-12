@@ -4,18 +4,7 @@
 #include "../formas/3d.h"
 #include <vector>
 
-class Manivela{
-    public:
-        float r;
-        float x[4];
-        float y[4];
-};
 
-class Pistao{
-    public:
-        float x[4];
-        float y[4];
-};
 
 class Motor{
 
@@ -26,15 +15,15 @@ protected:
     int w, h;
     bool ligado;
     std::vector <Forma> _3d;
-    void build3d();
-    void build2d();
-    Manivela manivela;
-    Pistao pistao;
+    void build();
+    float r;
 public:
     int dim = 20;
+    bool ort = false;
     float ang;
     int RPM;
     float rot;
+    bool exibir[9] = {true, true, true, true, true, true, true, true, true};
     Motor(int rpm, int _w, int _h);
     void chave();
     void _2dRender();
